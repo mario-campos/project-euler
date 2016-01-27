@@ -7,4 +7,4 @@ euler1 n = sum $ toList $ union mults3 mults5
   where mults3 = fromDistinctAscList $ filter (<n) (multiples 3)
         mults5 = fromDistinctAscList $ filter (<n) (multiples 5)
 
-main = euler1 1000
+main = print (euler1 1000)
