@@ -1,10 +1,10 @@
 import Data.IntSet as IntSet
 
-divides :: Int -> Int -> Bool
-divides n x = n `mod` x == 0
+hasFactor :: Int -> Int -> Bool
+hasFactor n x = n `mod` x == 0
 
 factors :: Int -> IntSet
-factors n = fromList $ Prelude.filter (divides n) [1..n]
+factors n = fromList $ Prelude.filter (hasFactor n) [1..n]
 
 prime :: Int -> Bool
 prime n = factors n == fromList [1, n]
